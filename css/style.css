@@ -1,0 +1,142 @@
+body {
+    background-color: #F4F4F4;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Verdana, Helvetica;
+}
+
+.container{
+    min-width: 993px;
+}
+
+.col-selos {
+    min-width: 400px;
+    color: #856284;
+    margin: 0px;
+    margin-right: -100px;
+    margin-top: 30px;
+    border-right: 2px solid #fff;
+}
+
+hr {
+    color: #fff;
+    border: solid #fff 1px
+}
+.selo {
+    width: 35%;
+    margin: 15px;
+    min-width: 150px;
+    max-width: 210px;
+    text-align: center;
+}
+
+.col-lixeiras {
+    margin-top: 235px;
+    text-align: center;
+    width: 100%;
+    max-width: 880px;
+    position: relative;
+}
+
+.col2-lixeiras {
+    margin-top: 235px;
+    text-align: center;
+    width: 100%;
+    max-width: 880px;
+    margin-left: -130px;
+    position: relative;
+}
+
+.lixeira {
+    margin: 15px;
+    height: 95px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.button {
+    background-color: #3ab59e; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 120px;
+    margin-top: 10px;
+    border: solid 2px #3ab59e;
+    position: right;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #3ab59e;
+    border: solid 2px #3ab59e;
+}
+
+.destaca_sobre {
+    background-color: rgb(226, 226, 226);   
+    outline: solid rgb(226, 226, 226) 10px; 
+    padding: 3px;
+}
+
+.soltou {
+    background-color: #d7ece8;
+    outline: #d7ece8 solid 10px;
+    opacity:0.55;
+	-moz-opacity: 0.55;
+    filter: alpha(opacity=55);
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.desativa_selo {
+    opacity:0.25;
+	-moz-opacity: 0.25;
+    filter: alpha(opacity=25);
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.acertou {
+    border: solid green 3px;
+    padding: 5px;
+    margin: 20px;
+    background-color: rgb(230, 229, 228);
+}
+
+.errou {
+    border: solid rgb(175, 36, 36) 2px;
+    padding: 5px;
+    margin: 20px;
+    background-color: rgb(230, 229, 228);
+}
+
+.resposta {
+    width: 70%;
+    margin-top: 20px;
+}
+
+section {
+    width: 100%;
+}
+
+.tick {
+    width: 35px;
+    position: absolute;
+    margin-bottom: -70px;
+    margin-left: -50px;
+    overflow: auto;
+}
+
+.iconMover {
+    cursor: url(hand-move.cur), no-drop;
+    }
+
+.handMouse{
+    cursor: url(hand-mouse.cur), default; 
+}

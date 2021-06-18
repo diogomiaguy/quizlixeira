@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atividade - Resíduos</title>
+	<link rel="stylesheet" href="css/stylequiz.css">
+</head>
+
+
+<body onload="NextQuestion(0)">
+
+	<header>
+		<section>
+			<h5>Você sabe separar corretamente o lixo?</h5>
+			<h6>Ao separar e armazenar os resíduos adequadamente,
+				você ajuda a promovera saúde do ambiente e,
+				consequentemente, dos seres vivos.</h6>
+			<h6>O seu desafio será selecionar a lixeira referente ao resíduo apresentado. Para conferir o resultado, clique
+				em “responder”.</h6>
+		</section>
+	</header>
+	<main>
+		<!-- creating a modal for when quiz ends -->
+		<div class="modal-container" id="score-modal">
+
+			<div class="modal-content-container">
+
+				<h1>Parabéns, quiz finalizado.</h1>
+
+				<div class="grade-details">
+					<p>Respostas erradas : <span id="wrong-answers"></span></p>
+					<p>Respostas certas : <span id="right-answers"></span></p>
+					<p>Porcentagem : <span id="grade-percentage"></span>%</p>
+					<p><span id="remarks"></span></p>
+				</div>
+
+				<div class="modal-button-container">
+					<button id="closemodal">Tentar novamente</button>
+				</div>
+
+			</div>
+		</div>
+		<!-- end of modal of quiz details-->
+
+		<div class="game-quiz-container">
+
+			<div class="game-details-container">
+				<h1>Score : <span id="player-score"></span> / 10</h1>
+				<h1> Questões : <span id="question-number"></span> / <span id="totalquestoes"></span></h1>
+			</div>
+
+			<div class="game-question-container">
+				<span id="display-question"></span>				
+			</div>
+
+			<div class="game-options-container">
+
+				<div class="modal-container" id="option-modal">
+
+					<div class="modal-content-container">
+						<h1>Selecione uma lixeira</h1>
+
+						<div class="modal-button-container">
+							<button onclick="closeOptionModal()">Continue</button>
+						</div>
+
+					</div>
+
+				</div>
+
+				<span>
+					<input type="radio" id="opcao-um" name="option" class="radio" value="optionA" />
+					<label for="opcao-um" class="option" id="opcao-um-label">
+						<img src="img/lix-azul.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-dois" name="option" class="radio" value="optionB" />
+					<label for="opcao-dois" class="option" id="opcao-dois-label">
+						<img src="img/lix-laranja.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-tres" name="option" class="radio" value="optionC" />
+					<label for="opcao-tres" class="option" id="opcao-tres-label">
+						<img src="img/lix-amarela.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-quatro" name="option" class="radio" value="optionD" />
+					<label for="opcao-quatro" class="option" id="opcao-quatro-label">
+						<img src="img/lix-preta.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-cinco" name="option" class="radio" value="optionE" />
+					<label for="opcao-cinco" class="option" id="opcao-cinco-label">
+						<img src="img/lix-verde.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-seis" name="option" class="radio" value="optionF" />
+					<label for="opcao-seis" class="option" id="opcao-seis-label">
+						<img src="img/lix-cinza.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-sete" name="option" class="radio" value="optionG" />
+					<label for="opcao-sete" class="option" id="opcao-sete-label">
+						<img src="img/lix-vermelha.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-oito" name="option" class="radio" value="optionH" />
+					<label for="opcao-oito" class="option" id="opcao-oito-label">
+						<img src="img/lix-roxa.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-nove" name="option" class="radio" value="optionI" />
+					<label for="opcao-nove" class="option" id="opcao-nove-label">
+						<img src="img/lix-marrom.png" alt="">
+					</label>
+				</span>
+				<span>
+					<input type="radio" id="opcao-dez" name="option" class="radio" value="optionJ" />
+					<label for="opcao-dez" class="option" id="opcao-dez-label">
+						<img src="img/lix-branca.png" alt="">
+					</label>
+				</span>
+
+
+
+			</div>
+
+			<div class="next-button-container">
+				<button onclick="handleNextQuestion()">Responder</button>
+			</div>
+
+		</div>
+	</main>
+
+	<script src="js/scriptquiz.js"></script>
+</body>
+
+</html>

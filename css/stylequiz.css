@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    background-color: #F4F4F4;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Verdana, Helvetica;
+    color: #856284;
+}
+
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+header,
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.game-quiz-container {
+    width: 100%;
+    padding: 40px 0;
+    /* height: 30rem; */
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+}
+
+.game-details-container {
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-details-container h1 {
+    font-size: 1.2rem;
+}
+
+.game-question-container {
+    width: 80%;
+    /* height: 8rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .game-question-container h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 3px;
+} */
+
+.game-options-container {
+    max-width: 650px;
+    padding: 20px;
+    /* height: 12rem; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.game-options-container span {
+    width: 100%;
+    padding: 10px;
+    /* background: #fff; */
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.game-options-container span img {
+    width: 90%;
+}
+
+span label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 1000;
+    color: rgb(22, 22, 22);
+}
+
+span label:hover {
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: white;
+}
+
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+
+
+input[type=radio]:checked~.option {
+    border: 3px solid #48a599;
+    border-radius: 10px;
+}
+
+.correct {
+    /* background: green;
+    border: 3px solid green; */
+    border-radius: 10px;
+    position: relative;
+}
+
+.correct::before {
+    content: "✓";
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border: 4px solid #48a599;
+    color: #48a599;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    top: -5px;
+    left: -5px;
+}
+
+.incorrect {
+    /* background: red;
+    border: 3px solid red; */
+    border-radius: 10px;
+    position: relative;
+}
+
+.incorrect::before {
+    content: "✗";
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border: 4px solid red;
+    color: red;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    top: -5px;
+    left: -5px;
+}
+
+.next-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.next-button-container button {
+    background: #48a599;
+    border: 2px solid #48a599;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+}
+
+.next-button-container button:hover {
+    background: #fff;
+    border: 2px solid #48a599;
+    color: #48a599;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #48a599dc;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out; */
+}
+
+.modal-content-container {
+    height: 20rem;
+    width: 25rem;
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.modal-content-container h1 {
+    font-size: 1.3rem;
+    height: 3rem;
+    color: lightgray;
+    text-align: center;
+}
+
+.grade-details {
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grade-details p {
+    color: white;
+    text-align: center;
+}
+
+.modal-button-container {
+    height: 2rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-button-container button {
+    width: 20rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(252, 242, 241);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-button-container button:hover {
+    background-color: #48a599dc;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 769px){
+    .game-details-container {
+        justify-content: space-between;
+    }
+    .game-details-container h1 {
+        font-size: 1rem;
+    }
+    
+    .correct::before {
+        content: "✓";
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        border: 3px solid #48a599;
+        color: #48a599;
+        background: #fff;
+        position: absolute;
+        border-radius: 50%;
+        text-align: center;
+        top: -5px;
+        left: -5px;
+    }
+    
+    .incorrect::before {
+        content: "✗";
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        border: 3px solid red;
+        color: red;
+        background: #fff;
+        position: absolute;
+        border-radius: 50%;
+        text-align: center;
+        top: -5px;
+        left: -5px;
+    }
+
+    #display-question img {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 281px){
+    
+    .game-details-container h1 {
+        font-size: 0.8rem;
+    }
+
+    .game-options-container {
+        max-width: 650px;
+        padding: 20px;
+        /* height: 12rem; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+}
